@@ -17,7 +17,7 @@ createApp({
             }
                 )
         }
-    }
+    },
     mounted() {
         axios
         .request({
