@@ -60,7 +60,7 @@ Al click su un recordo, recuperare e mostrare i dati del recordo selezionato. */
 
                     <div class="wrapper p-5">
                         <div class="row g-5 flex-wrap">
-                            <div class="col-4" v-for="(record, index) in records" :key="index">
+                            <div class="col-4" v-for="(record, i) in records" :key="i">
                                 <div class="card p-4 d-flex align-items-center justify-content-center" @click="recordInfo(index)">
                                     <img width="250" :src="record.poster" alt="poster of album" class="img-card-top">
                                     <div class="text-white card-body p-0 d-flex flex-column align-items-center justify-content-center">

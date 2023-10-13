@@ -3,19 +3,14 @@ createApp({
     data() {
         return {
             records: [],
+            clickedRecord: null,
         }
     },
     methods: {
-        fetchData(url){
-            axios
-            .get(url)
-            .then(response => {
-                this.records = response.data;
-            })
-            .catch(error => {
-                this.error = (error.message);
-            }
-                )
+        recordInfo(i) {
+            this.clickedRecord= this.records[i];
+
+            // console.log(this.records[i]);
         }
     },
     mounted() {
