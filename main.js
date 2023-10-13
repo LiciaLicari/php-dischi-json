@@ -2,17 +2,17 @@ const { createApp } = Vue
 createApp({
     data() {
         return {
-            records: null,
+            records: [],
         }
     },
-    methods:{
+    methods: {
         fetchData(url){
             axios
             .get(url)
             .then(response => {
-                this.records = response.data
+                this.records = response.data;
             })
-            .catch(err => {
+            .catch(error => {
                 this.error = (error.message);
             }
                 )
